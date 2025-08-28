@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Extension Options</title>
+    <style>
+  /* Import Inter font (add this line in your HTML <head> or via @import in CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000;
+  color: #2196f3;
+  margin: 0;
+  min-height: 100vh;
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e90ff;
+  margin: 20px 0 30px 0; /* reduced top margin to 20px from 60px */
+  text-align: center;
+  letter-spacing: 1.4px;
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  width: 100%;
+  max-width: 520px;
+}
+
+
+.form-group {
+  background-color: #111;
+  padding: 24px 26px 26px 26px;
+  border-radius: 14px;
+  border: none;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 0 35px rgba(33, 150, 243, 0.10);
+  margin-bottom: 25px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #42a5f5;
+  letter-spacing: 0.7px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #2196f3;
+  border-radius: 9px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+  color: #546e7a;
+  font-style: italic;
+}
+
+input[type="text"]:focus {
+  border-color: #64b5f6;
+  box-shadow: 0 0 12px rgba(33, 150, 243, 0.48);
+  outline: none;
+}
+
+a, a:visited, a:active {
+  color: #64b5f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  letter-spacing: 0.6px;
+}
+
+a:hover {
+  color: #90caf9;
+  text-decoration: underline;
+}
+
+#save-button {
+  display: block;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  font-size: 1.15rem;
+  padding: 14px 32px;
+  border-radius: 9px;
+  margin: 24px auto 0 auto;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 520px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#save-button:hover {
+  background-color: #1976d2;
+  box-shadow: 0 0 16px rgba(33, 150, 243, 0.48);
+}
+
+.success-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #1e90ff;
+  margin-top: 14px;
+  font-weight: 600;
+  display: none;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    <h1>AI Summary Settings</h1>
+
+    <div class="form-group">
+        <label for="api-key">Gemini API key</label>
+        <input type="text" id="api-key" placeholder="Enter your Gemini API key"/>
+        <p>
+            Click here to get your GEMINI API KEY : <a href="https://aistudio.google.com/app/apikey"target="_blank">Google AI Studio</a>
+        </p>
+    </div>
+
+    <button id="save-button">Save settings</button>
+    <p id="success-message" class="success-message">
+        Setting saved successfully
+    </p>
+    <script src="options.js"></script>
+</body>
+</html>
